@@ -3,7 +3,7 @@
 #include "Headers.h"
 
 int main() {
-    FILE *fp = fopen("testcases.txt", "r");
+    FILE *fp = fopen("tests/testcases.txt", "r");
     if (!fp) {
         printf("Error: could not open test file.\n");
         return 1;

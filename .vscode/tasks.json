@@ -7,8 +7,8 @@
             "command": "C:\\mingw64\\bin\\gcc.exe",
             "args": [
                 "-g",
-                "main.c",
-                "source.c",
+                "src/main.c",
+                "src/source.c",
                 "-o",
                 "main.exe"
             ],
