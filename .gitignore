@@ -1,6 +1,18 @@
-echo "*.o
-*.out
+# Compiled files
 *.exe
+*.o
+*.out
+
+# Python cache
 __pycache__/
 *.pyc
-.DS_Store" > .gitignore
+
+# VS Code temp files
+tempCodeRunnerFile.*
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Build directory
+/build/
