@@ -17,36 +17,47 @@ Detecting target sums in sequential data is useful in many domains:
 ---
 
 ## 🧠 Approach
-Currently implemented: **Brute Force / Prefix Sum approach**
+### Previous (Brute Force / Prefix Sum)
 - Iterate over all possible subarrays.
 - For each subarray, compute the sum and check if it equals `k`.
 - Count the number of valid subarrays.
 
-This is simple to implement and works correctly, but is not optimal for large inputs.
+This method is simple to implement and works correctly, but is not optimal for large inputs.
 
-**Planned improvement:** Replace brute force with a **prefix sum + hash map** approach to achieve linear time complexity.
+### Current (Prefix Sum + Hash Map)
+- Maintain a running prefix sum while traversing the array.
+- Use a hash map to store the frequency of prefix sums encountered.
+- For each new prefix sum, check if `(current_sum - k)` exists in the hash map.
+- If it does, add the frequency to the count of valid subarrays.
+- Update the hash map with the current prefix sum.
+
+This approach reduces the time complexity to linear and scales well for large datasets.
+
 
 ---
 
 ## ⏱️ Complexity Analysis
-- **Current solution (brute force):**
+- **Brute Force (previous solution):**
   - Time Complexity: **O(n²)** — two nested loops to check all subarrays.
-  - Space Complexity: **O(1)** — only a few variables used.
+  - Space Complexity: **O(n)** — prefix sums in an array.
 
-- **Future solution (prefix sum + hash map):**
-  - Time Complexity: **O(n)**
-  - Space Complexity: **O(n)**
+- **Prefix Sum + Hash Map (current solution):**
+  - Time Complexity: **O(n)** — single pass with hash lookups.
+  - Space Complexity: **O(n)** — hash map stores prefix sums.
+
 
 ---
 
 ## 📂 Project Files
-- `main.c` → Program entry point (reads input, calls solver).
-- `source.c` → Implementation of the subarray sum algorithm.
-- `Headers.h` → Function prototypes and shared definitions.
-- `testcases.txt` → Sample test inputs.
-- `large_test_generator.py` → Python script to generate large random test cases.
+- `src/main.c` → Program entry point (reads input, calls solver).
+- `src/source.c` → Implementation of the subarray sum algorithm.
+- `src/Headers.h` → Function prototypes and shared definitions.
+- `tests/testcases.txt` → Sample test inputs.
+- `tests/large_test_generator.py` → Python script to generate large random test cases.
+- `build/` → Output directory containing compiled binaries (e.g., `main.exe`).
 - `Makefile` → Automates build and run.
 - `README.md` → Documentation (this file).
+
 
 ---
 
