@@ -20,7 +20,7 @@ jobs:
       - name: Build project
         run: |
             mkdir -p build
-            gcc -o build/subarray_sum src/main.c src/sources.c
+            gcc -o build/subarray_sum src/main.c src/source.c
 
       - name: Run tests
         run: ./build/subarray_sum tests/testcases.txt
