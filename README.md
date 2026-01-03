@@ -101,7 +101,7 @@ This project uses **GitHub Actions** to automate testing:
 
 You can view the status badge below:
 
-![CI](https://github.com/BATTI07/repo/actions/workflows/ci.yml/badge.svg)
+![CI](https://github.com/BATTI07/project-C-Subarray-Sum-Equals-K/actions/workflows/ci.yml/badge.svg)
 ## 🤝 Contributing
 - Fork the repository and create a new branch.
 - Make your changes and commit them.
