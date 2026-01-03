@@ -3,7 +3,7 @@ import os
 def generate_testcases():
     n = 10000
     new_tests = []
-
+    
     # 81: All zeros
     arr81 = [0] * n
     k81 = 0
@@ -62,6 +62,7 @@ def generate_testcases():
         freq[prefix_sum] += 1
     expected86 = count
     new_tests.append((86, n, arr86, k86, expected86))
+
 
     ''' For New Tests
     Ith: New Test
