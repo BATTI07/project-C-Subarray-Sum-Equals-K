@@ -49,6 +49,7 @@ This approach reduces the time complexity to linear and scales well for large da
 ---
 
 ## 📂 Project Files
+- `.github/workflow/ci.yml` → Automate testing after a pull/push request.
 - `src/main.c` → Program entry point (reads input, calls solver).
 - `src/source.c` → Implementation of the subarray sum algorithm.
 - `src/Headers.h` → Function prototypes and shared definitions.
@@ -74,7 +75,8 @@ make
 make run
 
 # Clean build artifacts
-make clean
+make clean 
+```
 
 ### Windows (without make)
 
@@ -86,6 +88,10 @@ gcc -Wall -Wextra -O2 src/main.c src/source.c -o build/main.exe
 
 # Run with sample test cases
 build\main.exe < tests\testcases.txt
+```
+
+---
+
 ## ✅ Continuous Integration (CI)
 
 This project uses **GitHub Actions** to automate testing:
